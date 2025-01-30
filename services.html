@@ -6,6 +6,7 @@
     <title>Md Rifat Rahman - Service</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/styles.css"><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
@@ -23,7 +24,7 @@
                 </ul>
             </nav>
             <div class="cta-button">
-                <a href="#hire-me" class="btn">Hire Me</a>
+                <button id="openDialogButton" class="hireBtn">Hire Me</button>
             </div>
         </div>
     </header>
@@ -63,7 +64,46 @@
         </div>
     </section>
     
+    <div id="customDialog" class="dialog">
+        <div class="dialog-content">
+            <span id="closeDialogButton" class="close">&times;</span>
+            <h3>Contact Details</h3>
+            <div class="contact-details">
+                <ul>
+                    <li><strong>WhatsApp:</strong> +880 1790-297297</li>
+                    <li><strong>Telegram:</strong> +880 1790-297297</li>
+                    <li><strong>Email:</strong> <a href="mailto:rmdrifat547@gmail.com">rmdrifat547@gmail.com</a></li>
+                    <li><strong>Fiverr:</strong> <a href="https://www.fiverr.com/mdrifatrahma870/buying?source=avatar_menu_profile">Click Here</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     
+    <script>
+        // Get the dialog and buttons
+        const openDialogButton = document.getElementById("openDialogButton");
+        const customDialog = document.getElementById("customDialog");
+        const closeDialogButton = document.getElementById("closeDialogButton");
+
+        // Open the dialog box when the button is clicked
+        openDialogButton.onclick = function() {
+            customDialog.style.display = "block";
+        }
+
+        // Close the dialog box when the close button is clicked
+        closeDialogButton.onclick = function() {
+            customDialog.style.display = "none";
+        }
+
+        // Close the dialog box if the user clicks outside of it
+        window.onclick = function(event) {
+            if (event.target == customDialog) {
+                customDialog.style.display = "none";
+            }
+        }
+    </script>
+
+
     <footer class="footer">
         <div class="social-icons">
             <a href="https://www.facebook.com/mdrrifat297/"><i class="fab fa-facebook"></i> Facebook</a>

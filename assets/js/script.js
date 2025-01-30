@@ -1,13 +1,21 @@
-document.getElementById("contactBtn").addEventListener("click", function() {
-    document.getElementById("contactDialog").style.display = "flex";
-});
+// Get the dialog and buttons
+const openDialogButton = document.getElementById("openDialogButton");
+const customDialog = document.getElementById("customDialog");
+const closeDialogButton = document.getElementById("closeDialogButton");
 
-document.getElementById("closeBtn").addEventListener("click", function() {
-    document.getElementById("contactDialog").style.display = "none";
-});
+// Open the dialog box when the button is clicked
+openDialogButton.onclick = function() {
+    customDialog.style.display = "block";
+}
 
-window.addEventListener("click", function(event) {
-    if (event.target == document.getElementById("contactDialog")) {
-        document.getElementById("contactDialog").style.display = "none";
+// Close the dialog box when the close button is clicked
+closeDialogButton.onclick = function() {
+    customDialog.style.display = "none";
+}
+
+// Close the dialog box if the user clicks outside of it
+window.onclick = function(event) {
+    if (event.target == customDialog) {
+        customDialog.style.display = "none";
     }
-});
+}

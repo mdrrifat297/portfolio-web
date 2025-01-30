@@ -24,13 +24,53 @@
                 </ul>
             </nav>
             <div class="cta-button">
-                <a href="#hire-me" class="btn">Hire Me</a>
+                <button id="openDialogButton" class="hireBtn">Hire Me</button>
             </div>
         </div>
     </header>
 
     <br><br><br>
     
+    <div id="customDialog" class="dialog">
+        <div class="dialog-content">
+            <span id="closeDialogButton" class="close">&times;</span>
+            <h3>Contact Details</h3>
+            <div class="contact-details">
+                <ul>
+                    <li><strong>WhatsApp:</strong> +880 1790-297297</li>
+                    <li><strong>Telegram:</strong> +880 1790-297297</li>
+                    <li><strong>Email:</strong> <a href="mailto:rmdrifat547@gmail.com">rmdrifat547@gmail.com</a></li>
+                    <li><strong>Fiverr:</strong> <a href="https://www.fiverr.com/mdrifatrahma870/buying?source=avatar_menu_profile">Click Here</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Get the dialog and buttons
+        const openDialogButton = document.getElementById("openDialogButton");
+        const customDialog = document.getElementById("customDialog");
+        const closeDialogButton = document.getElementById("closeDialogButton");
+
+        // Open the dialog box when the button is clicked
+        openDialogButton.onclick = function() {
+            customDialog.style.display = "block";
+        }
+
+        // Close the dialog box when the close button is clicked
+        closeDialogButton.onclick = function() {
+            customDialog.style.display = "none";
+        }
+
+        // Close the dialog box if the user clicks outside of it
+        window.onclick = function(event) {
+            if (event.target == customDialog) {
+                customDialog.style.display = "none";
+            }
+        }
+    </script>
+
+
     <section class="services" id="services">
         <br><br><br>
         <div class="container" data-aos="fade-up" data-aos-duration="1000">
